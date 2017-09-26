@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+// Mixins
+@import "components/mixins";
+@import "components/color";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// components
+@import "components/global";
+@import "components/badges";
+@import "components/icons-material-design";
+@import "components/grid";
+@import "components/navbar";
+@import "components/roboto";
+@import "components/avenir";
+@import "components/typography";
+@import "components/transitions";
+@import "components/cards";
+@import "components/toast";
+@import "components/tabs";
+@import "components/tooltip";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/waves";
+@import "components/modal";
+@import "components/collapsible";
+@import "components/chips";
+@import "components/materialbox";
+@import "components/forms/forms";
+@import "components/table_of_contents";
+@import "components/sideNav";
+@import "components/preloader";
+@import "components/slider";
+@import "components/carousel";
+@import "components/tapTarget";
+@import "components/pulse";
+@import "components/date_picker/default";
+@import "components/date_picker/default.date";
+@import "components/date_picker/default.time";
+
+
+body {
+  background: white;
+}
+
+
+#hero {
+
+    .diagonal {
+      background: rgba(white,.05);
+      height: 200px;
+      width: 100%;
+      position: absolute;
+      align-self: flex-start;
+      transform: skewY(-5deg)  translateY(-220px);
+    }
+
+
+
+    background: black;
+    background: linear-gradient(30deg, #473660 0%, #586591 50%, #6B99C6 100%);
+    color: white;
+    text-align: center;
+    @media #{$medium-and-up} {
+      text-align: left;
+    }
+
+    // layout & spacing
+    height: calc(100vh + 100px);
+    padding: 0 0 0;
+    display: flex;
+    align-items: center;
+    > .container > .row {
+      padding: 12px 0;
+    }
+    @media #{$medium-and-up} {
+      > .container > .row {
+        padding: 12px 0;
+      }
+    }
+    @media #{$large-and-up} {
+      > .container > .row {
+        padding: 25px 0;
+      }
+    }
+    .brand {
+      margin-top: -100px;
+    }
+
+    .headshots {
+      text-align: right;
+      img {
+        max-width: 80px;
+        margin-right: 12px;
+      }
+    }
+
+    h1 {
+      margin: 0;
+      color: rgba(black,.6);
+      font-weight: 900;
+      span {
+        font-weight: 100;
+      }
+    }
+
+    h2 {
+      font-size: 14px;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: .25em;
+      opacity: .5;
+    }
+
+    .value-prop {
+      p {
+        margin: 0;
+        max-width: 640px;
+      }
+      > li {
+        //display: block;
+        //width: 100%;
+        padding: .5em 0;
+        //text-align: center;
+      }
+      @media #{$medium-and-up} {
+        > li {
+          small {
+            padding-right: 40px;
+          }
+        }
+      }
+      @media #{$extra-large-and-up} {
+        // styles for medium screens and larger
+        > li {
+          &:before {
+            content: '';
+            $size: 100px;
+            height: $size;
+            width: $size;
+            background: url("../../../assets/img/ampersand.png") no-repeat center 20%;
+            background-size: 30%;
+            opacity: .25;
+            display: block;
+            position: absolute;
+            transform: translate(-$size);
+          }
+          &:nth-of-type(1):before  {
+            background: none;
+          }
+          small {
+            padding-right: 70px;
+          }
+        }
+      }
+      > li {
+        &:nth-of-type(1) span {
+          color: $base-red;
+        }
+        &:nth-of-type(2) span {
+          color: $base-blue;
+        }
+        &:nth-of-type(3) span {
+          color: $base-green;
+        }
+      }
+    }
+
+    ul {
+      margin-top: 0;
+      span {
+        display: block;
+        //padding-right: 30px;
+      }
+      small {
+        display: block;
+        text-transform: uppercase;
+        opacity: .5;
+        font-size: 70%;
+        //padding-right: 70px;
+      }
+    }
+
+    .cta.btn {
+      background: orange;
+      text-transform: none;
+      height: 90px;
+      line-height: 90px;
+      padding: 0 70px;
+      background: linear-gradient(30deg, color("red","base") 0%, color("yellow","base") 100%);
+      span {
+        opacity: .5;
+        padding-left: 12px;
+      }
+    }
+
+}
+
+#team {
+
+  .diagonal {
+    background: white;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    align-self: flex-start;
+    transform: skewY(-5deg)  translateY(-80px);
+    border-top: 100px solid rgba(black,.1);
+    box-shadow: 0 -100px 0 rgba(black,.1);
+  }
+
+
+  background: white;
+
+  // layout & spacing
+  padding: 0;
+  //height: 80vh;
+  display: flex;
+  align-items: center;
+  > .container > .row {
+    margin: 70px 0;
+  }
+
+  .members {
+    padding: 200px 0;
+    text-align: center;
+    font-size: 17px;
+
+    img {
+      max-width: 80%;
+      margin-bottom: 1em;
+    }
+    strong {
+      display: block;
+      color: #555;
+    }
+    em {
+      opacity: .6;
+      //font-style: italic;
+    }
+  }
+
+}
