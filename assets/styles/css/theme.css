@@ -6926,7 +6926,7 @@ body {
     text-align: right; }
     #hero .headshots img {
       max-width: 80px;
-      margin-right: 12px; }
+      margin-right: 8px; }
   #hero h1 {
     margin: 0;
     color: rgba(0, 0, 0, 0.6);
@@ -6942,8 +6942,9 @@ body {
   #hero .value-prop p {
     margin: 0;
     max-width: 640px; }
-  #hero .value-prop > li {
-    padding: .5em 0; }
+  @media only screen and (max-width: 600px) {
+    #hero .value-prop > li {
+      padding: .5em 0; } }
   @media only screen and (min-width: 601px) {
     #hero .value-prop > li small {
       padding-right: 40px; } }
